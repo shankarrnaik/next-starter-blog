@@ -18,13 +18,13 @@
 
 **Installation**
 
--- Bare Machine
+#### Bare Machine
 - git clone [https://github.com/rizkimcitra/next-starter-blog.git](https://github.com/devsecops-learning/next-starter-blog.git)https://github.com/devsecops-learning/next-starter-blog.git
 - npm install
 - npm run build
 - npm start
 
--- Docker Container
+#### Docker Container
 - Create Dockerfile & add below content
 ```
 # Specify the parent image from which we build
