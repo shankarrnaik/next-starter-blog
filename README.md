@@ -15,3 +15,37 @@
 - 💅 Tailwind CSS for styling
 - 🌠 Framer Motion for animation
 - 💎 Prism to highlight your code blocks
+
+**Installation**
+
+-- Bare Machine
+- git clone [https://github.com/rizkimcitra/next-starter-blog.git](https://github.com/devsecops-learning/next-starter-blog.git)https://github.com/devsecops-learning/next-starter-blog.git
+- npm install
+- npm run build
+- npm start
+
+-- Docker Container
+- Create Dockerfile & add below content
+```
+# Specify the parent image from which we build
+FROM node:latest
+
+# Set the working directory
+WORKDIR /app
+
+# Copy files from your host to your current working directory
+COPY . /app
+
+# Build the application with cmake
+RUN npm install && npm run build
+
+#Expose Port
+EXPOSE 3000
+
+# Run the application
+CMD ["npm", "start"]
+```
+- Execute `docker build -t next-starter-blog-docker:v1 .`
+- Execute `docker run -d -p 3000:3000 next-starter-blog-docker:v1`
+- Check `netstat -nltop`
+- curl localhost:3000
