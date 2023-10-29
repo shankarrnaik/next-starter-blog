@@ -20,7 +20,7 @@
 
 #### Bare Machine
 - yum install -y git docker npm
-- git clone [https://github.com/rizkimcitra/next-starter-blog.git](https://github.com/devsecops-learning/next-starter-blog.git)https://github.com/devsecops-learning/next-starter-blog.git
+- git clone https://github.com/devsecops-learning/next-starter-blog.git
 - npm install
 - npm run build
 - npm start
