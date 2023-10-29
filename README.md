@@ -21,11 +21,15 @@
 #### Bare Machine
 - yum install -y git docker npm
 - git clone https://github.com/devsecops-learning/next-starter-blog.git
+- cd next-starter-blog/
 - npm install
 - npm run build
 - npm start
 
 #### Docker Container
+
+- Start Docker Service Execute `systemctl enable --now docker`
+
 - Create Dockerfile & add below content
 ```
 # Specify the parent image from which we build
@@ -47,6 +51,6 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 - Execute `docker build -t next-starter-blog-docker:v1 .`
-- Execute `docker run -d -p 3000:3000 next-starter-blog-docker:v1`
+- Execute `docker run -d -p 3000:3000 --name next-starter-blog-docker-v1 next-starter-blog-docker:v1`
 - Check `netstat -nltop`
 - curl localhost:3000
